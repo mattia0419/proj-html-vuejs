@@ -13,9 +13,12 @@ import { faTwitter } from '@fortawesome/free-brands-svg-icons'
 
 import { faPinterestP } from '@fortawesome/free-brands-svg-icons'
 
+import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons'
+
+
 
 /* add icons to the library */
-library.add(faFacebook, faTwitter, faPinterestP)
+library.add(faFacebook, faTwitter, faPinterestP, faMagnifyingGlass)
 
 
 
