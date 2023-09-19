@@ -25,8 +25,10 @@ export default {
                 </div>
             </div>
         </div>
+
         <!-- LINKS HEADER -->
         <div class="header-nav">
+
             <div class="container d-flex justify-content-between align-items-center p-4">
                 <div>
                     <img src="../assets/images/cropped-Group-39-2x.png" alt="">
@@ -48,6 +50,14 @@ export default {
 
 
 <style lang="scss" scoped>
+header {
+    position: relative;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    width: 100%;
+}
+
 .contact {
     background-color: #3C3C3C;
     color: white;
@@ -55,7 +65,6 @@ export default {
 
 .header-nav {
     background-color: white;
-    position: fixed;
     width: 100%;
 
     .link {
@@ -69,6 +78,8 @@ export default {
 
         .active:hover {
             color: #00D9A6;
+            font-size: 20px;
+            transition: 0.5s;
         }
     }
 
