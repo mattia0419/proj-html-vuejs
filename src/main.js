@@ -15,10 +15,19 @@ import { faPinterestP } from '@fortawesome/free-brands-svg-icons'
 
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons'
 
+import { faClock } from '@fortawesome/free-regular-svg-icons'
+
+import { faCloud } from '@fortawesome/free-solid-svg-icons'
+
+import { faCompass } from '@fortawesome/free-solid-svg-icons'
+
+import { faTabletScreenButton } from '@fortawesome/free-solid-svg-icons'
+
+
 
 
 /* add icons to the library */
-library.add(faFacebook, faTwitter, faPinterestP, faMagnifyingGlass)
+library.add(faFacebook, faTwitter, faPinterestP, faMagnifyingGlass, faClock, faCloud, faCompass, faTabletScreenButton)
 
 
 
