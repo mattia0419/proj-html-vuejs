@@ -4,6 +4,7 @@ export default {
         return {
             images: ['Group-36-2x.png', 'Group-35-2x.png', 'Group-40-2x.png'],
             activeSlide: 0,
+            gridImages: ['ina-soulis-227104-unsplash-1024x1024.jpg', 'sunisa-misa-531163-unsplash-1024x1024.jpg', '355H-1024x1024.jpg', 'photo-1448932252197-d19750584e56-1024x1024.jpg', 'business-competition-PB366D8-1024x1024.jpg', 'cozy-sofa-in-living-room-PQR5AB9-1024x1024.jpg', 'aa9a4539-PQGJ7HU-1024x1024.jpg', 'cody-davis-253928-unsplash-1024x1024.jpg']
         }
     },
     methods: {
@@ -102,6 +103,75 @@ export default {
                 </div>
             </div>
         </div>
+        <div class="third-section d-flex">
+            <div class="left-3 d-none d-lg-block">
+                <div class="front">
+                    <div class="up">
+                        <img src="../assets/images/businesswoman-analysing-document-P8WSNMC-1024x820.jpg" alt="">
+                    </div>
+                    <div class="down">
+                        <img src="../assets/images/businesswoman-analysing-document-P8WSNMC-1024x820.jpg" alt="">
+                    </div>
+                </div>
+                <div class="back">
+                    <div class="up">
+                        <img src="../assets/images/busy-architect-PYVKWM4-1024x872.jpg" alt="">
+                    </div>
+                    <div class="down">
+                        <img src="../assets/images/busy-architect-PYVKWM4-1024x872.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="right-3">
+                <h1>learn more about our <span class="other-green">missions</span></h1>
+                <div class="line">
+                    <span class="small-d"></span>
+                    <span class="big-d"></span>
+                </div>
+                <p>Far far away, behind the word mountains, far from the countries Voskalia and Consonantia, there live the
+                    blind texts. Separeted they live in Bookmarksgrove right at the coast of the Semantics, a large language
+                    ocean.Separeted they live in Bookmarksgrove.
+                </p>
+                <button class="mt-5">READ MORE</button>
+            </div>
+        </div>
+        <div class="fourth-section container-fluid">
+            <div class="up-grid">
+                <div class="left-up-grid ps-3">
+                    <div class="line">
+                        <span class="small-d"></span>
+                        <span class="big-d"></span>
+                    </div>
+                    <h1>Our recent <span class="other-green">web designs</span> & some examples of past <span
+                            class="other-green">projects</span></h1>
+                    <div class="line">
+                        <span class="small-d"></span>
+                        <span class="big-d"></span>
+                    </div>
+                </div>
+                <div class="right-up-grid">
+                    <p>
+                        Far far away, behind the word mountains, far from the countries Voskalia and Consonantia, there live
+                        the
+                        blind texts. Separeted they live in Bookmarksgrove right at the coast of the Semantics, a large
+                        language
+                        ocean.Separeted they live in Bookmarksgrove.
+                    </p>
+                </div>
+            </div>
+            <div class="container-fluid">
+                <div class="row row-cols-md-2 row-cols-lg-4 g-1">
+                    <div class="col" v-for="gridImage in gridImages">
+                        <img :src="buildingImagePath(gridImage)" alt="">
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+
+
     </main>
 </template>
 
@@ -262,6 +332,152 @@ main {
         h5 {
             padding-bottom: 15px;
         }
+    }
+}
+
+// THIRD SECTION
+.third-section {
+    background-color: #FAFAFA;
+    position: relative;
+    align-items: center;
+    justify-content: space-between;
+
+
+    .left-3 {
+        width: 40%;
+        padding: 150px 0;
+
+        img {
+            max-width: 100%;
+
+            object-fit: cover;
+        }
+
+        .front {
+            position: absolute;
+            z-index: 1;
+            left: 80px;
+            bottom: 120px;
+
+            .up {
+                width: 700px;
+                height: 280px;
+                margin-left: 30px;
+
+                img {
+                    min-width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    object-position: 40px -30px;
+                }
+
+            }
+
+            .down {
+                width: 700px;
+                height: 280px;
+
+                img {
+                    min-width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    object-position: 37px -295px;
+
+
+                }
+            }
+
+
+        }
+
+        .back {
+            padding-top: 60px;
+
+            .up {
+                width: 700px;
+                height: 300px;
+
+
+
+                img {
+                    min-width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    object-position: 0px -30px;
+                }
+            }
+
+            .down {
+                width: 700px;
+                height: 250px;
+                margin-left: -80px;
+
+
+                img {
+                    min-width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    object-position: 37px -295px;
+
+                }
+            }
+        }
+
+    }
+
+    .right-3 {
+        width: 30%;
+        margin-right: 120px;
+        margin-left: 100px;
+
+        h1 {
+            font-size: 55px;
+        }
+
+        button {
+            padding: 15px 30px;
+            border-radius: 25px;
+            border: transparent;
+            margin-right: 30px;
+            background-image: linear-gradient(to right, #98E15F, #1BDA99);
+        }
+    }
+}
+
+// FOURTH SECTION
+.fourth-section {
+    padding: 150px 0;
+    position: relative;
+
+    .up-grid {
+        display: flex;
+        justify-content: space-between;
+
+        .left-up-grid {
+            width: 50%;
+
+            h1 {
+                font-size: 55px;
+            }
+        }
+
+        .right-up-grid {
+            width: 40%;
+            align-self: flex-end;
+            padding-bottom: 45px;
+            font-size: 20px;
+        }
+    }
+
+    img {
+        width: 100%;
+        border-radius: 12px;
+    }
+
+    img:hover {
+        // transform: scale(1.1);
+        background-color: linear-gradient(to left, #98E15F, #1BDA99);
+        transition: 0.5s;
     }
 }
 </style>
