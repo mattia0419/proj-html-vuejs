@@ -23,11 +23,15 @@ import { faCompass } from '@fortawesome/free-solid-svg-icons'
 
 import { faTabletScreenButton } from '@fortawesome/free-solid-svg-icons'
 
+import { faQuoteRight } from '@fortawesome/free-solid-svg-icons'
+
+
+
 
 
 
 /* add icons to the library */
-library.add(faFacebook, faTwitter, faPinterestP, faMagnifyingGlass, faClock, faCloud, faCompass, faTabletScreenButton)
+library.add(faFacebook, faTwitter, faPinterestP, faMagnifyingGlass, faClock, faCloud, faCompass, faTabletScreenButton, faQuoteRight)
 
 
 

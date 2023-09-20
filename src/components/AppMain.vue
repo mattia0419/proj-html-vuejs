@@ -159,14 +159,25 @@ export default {
                     </p>
                 </div>
             </div>
-            <div class="container-fluid">
+            <div class="container-fluid text-center">
                 <div class="row row-cols-md-2 row-cols-lg-4 g-1">
                     <div class="col" v-for="gridImage in gridImages">
                         <img :src="buildingImagePath(gridImage)" alt="">
                     </div>
 
                 </div>
+                <button>READ MORE</button>
             </div>
+
+        </div>
+        <div class="fifth-section">
+            <h1 class="other-green"><font-awesome-icon :icon="['fas', 'quote-right']" size="2xl" /></h1>
+            <p class="par">When it comes to barbequing, there are two main schools of thought for the techniques that you
+                can you use.
+                Freshly scrambled eggs with applewood smocked bacon - are amazing!</p>
+            <img src="../assets/images/businesswoman-analysing-document-P8WSNMC-1024x820.jpg" alt="">
+            <h3 class="other-green">LISSA DURBIN</h3>
+            <span>Client</span>
 
         </div>
 
@@ -329,6 +340,13 @@ main {
             box-shadow: 0px 0px 35px -20px;
         }
 
+        .card:hover {
+            transition: 0.5s;
+            background-image: linear-gradient(to right, #98E15F, #1BDA99);
+            color: white;
+
+        }
+
         h5 {
             padding-bottom: 15px;
         }
@@ -478,6 +496,54 @@ main {
         // transform: scale(1.1);
         background-color: linear-gradient(to left, #98E15F, #1BDA99);
         transition: 0.5s;
+    }
+
+    button {
+        padding: 15px 30px;
+        border-radius: 25px;
+        border: transparent;
+        margin-right: 30px;
+        background-image: linear-gradient(to right, #98E15F, #1BDA99);
+        margin-top: 100px;
+    }
+}
+
+// FIFTH SECTION
+.fifth-section {
+    width: 100%;
+
+
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(../assets/images/four-businesspeople-in-a-boardroom-with-paperwork-PC4V8H4.jpg);
+    background-repeat: no-repeat;
+    background-position-y: 0px;
+    background-position-x: 0px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    h1 {
+        padding-top: 200px;
+    }
+
+    .par {
+        width: 30%;
+        padding: 50px 0;
+        text-align: center;
+    }
+
+    img {
+        width: 100px;
+        height: 100px;
+        object-fit: cover;
+        border-radius: 50%;
+        border: solid 4px white;
+        margin-bottom: 40px;
+    }
+
+    span {
+        padding-bottom: 200px;
     }
 }
 </style>
