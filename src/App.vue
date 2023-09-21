@@ -50,4 +50,9 @@ export default {
 
 <style lang="scss">
 @use './assets/style.scss';
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans&family=Quicksand:wght@300;400;500;600;700&family=Raleway&display=swap');
+
+body {
+  font-family: 'Quicksand', sans-serif;
+}
 </style>
