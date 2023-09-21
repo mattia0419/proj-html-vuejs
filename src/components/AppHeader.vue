@@ -38,9 +38,14 @@ export default {
                         <li class="active" v-for="link in links">{{ link }}</li>
                     </ul>
                 </div>
-                <div class="search">
-                    <button>PURCHASE</button>
-                    <font-awesome-icon class="icon-search" :icon="['fas', 'magnifying-glass']" />
+                <div class="search d-none d-lg-flex justify-content-center align-items-center">
+                    <div>
+                        <button>PURCHASE</button>
+                    </div>
+                    <div>
+                        <font-awesome-icon class="icon-search" :icon="['fas', 'magnifying-glass']" />
+                    </div>
+
                 </div>
             </div>
         </div>
@@ -78,7 +83,7 @@ header {
 
         .active:hover {
             color: #00D9A6;
-            font-size: 20px;
+            transform: scale(1.2);
             transition: 0.5s;
         }
     }
@@ -86,6 +91,8 @@ header {
 
 
     .search {
+
+
         button {
             padding: 15px 30px;
             border-radius: 25px;

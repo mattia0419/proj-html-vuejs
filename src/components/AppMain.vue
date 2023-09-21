@@ -1,5 +1,7 @@
 <script>
+import Button from './Button.vue';
 export default {
+
     data() {
         return {
             images: ['Group-36-2x.png', 'Group-35-2x.png', 'Group-40-2x.png'],
@@ -12,27 +14,6 @@ export default {
                 'client-5-2x.png',
                 'client-7-2x.png',
                 'client-9-2x.png'],
-            footerSec: [
-                {
-                    title: 'QUICK LINKS',
-                    links: ['Careers',
-                        'News',
-                        'Term of use',
-                        'Privacy Projects',
-                        'About',
-                        'Contact']
-                },
-                {
-                    title: 'CONTACT',
-                    address: 'Patricia C. Amedee 4401 Waldeck Street Grapevin Nashville, TX 76051',
-                    email: 'info@yourdomain.com',
-                    number: '+99 (0) 101 0000 888'
-                },
-                {
-                    title: 'LOCATION ON MAP',
-                    map: 'map.png'
-                }
-            ]
         }
     },
     methods: {
@@ -45,7 +26,13 @@ export default {
             console.log(imageURL);
 
             return imageURL.href;
+        },
+        hello() {
+            console.log('Hello');
         }
+    },
+    components: {
+        Button
     }
 }
 </script>
@@ -68,7 +55,7 @@ export default {
                     ocean.Separeted they live in Bookmarksgrove.
                 </p>
 
-                <button class="button-read">READ MORE</button>
+                <Button @clicked="hello" class="button-read"></Button>
                 <div class=" carousel">
                     <h6>FACEBOOK - INSTAGRAM - YOUTUBE - TWITTER</h6>
                     <span>
@@ -160,7 +147,7 @@ export default {
                     blind texts. Separeted they live in Bookmarksgrove right at the coast of the Semantics, a large language
                     ocean.Separeted they live in Bookmarksgrove.
                 </p>
-                <button class="mt-5">READ MORE</button>
+                <Button @clicked="hello" class="mt-5"></Button>
             </div>
         </div>
         <div class="fourth-section container-fluid">
@@ -194,7 +181,7 @@ export default {
                     </div>
 
                 </div>
-                <button>READ MORE</button>
+                <Button @clicked="hello"></Button>
             </div>
 
         </div>
@@ -237,7 +224,7 @@ export default {
                     </span>
                 </div>
             </div>
-            <button>READ MORE</button>
+            <Button @clicked="hello"></Button>
         </div>
         <div class="form-section container-fluid">
             <div class="row g-3">
