@@ -40,6 +40,7 @@ export default {
 
 <template>
     <main>
+        <!-- FIRST SECTION -->
         <div class="first-section d-flex">
             <div class="left">
                 <h6 class="green-title">17 YEARS OF EXPERIENCE</h6>
@@ -58,6 +59,7 @@ export default {
                 <Button @clicked="hello" class="button-read"></Button>
                 <div class=" carousel">
                     <h6>FACEBOOK - INSTAGRAM - YOUTUBE - TWITTER</h6>
+                    <!-- CAROSELLO -->
                     <span>
                         <button v-for="(image, index) in images" @click="goTo(index)"
                             :class="(index == activeSlide) ? 'active-slide' : ''" class="button-car">{{ '0' + (index +
@@ -68,7 +70,9 @@ export default {
             <div class="right">
                 <img :src="buildingImagePath(images[activeSlide])" :alt="images[activeSlide]">
             </div>
+            <!-- FINE CAROSELLO -->
         </div>
+        <!-- SECOND SECTION -->
         <div class="container-fluid second-section">
             <div class="left-2">
                 <h1>We Are Here To Make Your <span class="other-green">Website</span> Look More <span
@@ -118,6 +122,7 @@ export default {
                 </div>
             </div>
         </div>
+        <!-- THIRD SECTION -->
         <div class="third-section d-flex">
             <div class="left-3 d-none d-lg-block">
                 <div class="front">
@@ -150,6 +155,7 @@ export default {
                 <Button @clicked="hello" class="mt-5"></Button>
             </div>
         </div>
+        <!-- FOURTH SECTION -->
         <div class="fourth-section container-fluid">
             <div class="up-grid">
                 <div class="left-up-grid ps-3">
@@ -174,9 +180,15 @@ export default {
                     </p>
                 </div>
             </div>
+            <!-- GRID -->
             <div class="container-fluid text-center">
                 <div class="row row-cols-md-2 row-cols-lg-4 g-1">
-                    <div class="col" v-for="gridImage in gridImages">
+                    <div class="col card-sec" v-for="gridImage in gridImages">
+                        <!-- EFFETTO HOVER -->
+                        <div class="hover">
+                            <h3>A Famous Ferris Wheel</h3>
+                            <span>Marketing</span>
+                        </div>
                         <img :src="buildingImagePath(gridImage)" alt="">
                     </div>
 
@@ -185,6 +197,7 @@ export default {
             </div>
 
         </div>
+        <!-- FIFTH SECTION -->
         <div class="fifth-section">
             <h1 class="other-green"><font-awesome-icon :icon="['fas', 'quote-right']" size="2xl" /></h1>
             <p class="par">When it comes to barbequing, there are two main schools of thought for the techniques that you
@@ -195,6 +208,7 @@ export default {
             <span>Client</span>
 
         </div>
+        <!-- SIXTH SECTION -->
         <div class="sixth-section container-fluid">
             <h1>Latest News & Our <span class="other-green">Blog</span></h1>
             <div class="line">
@@ -226,6 +240,7 @@ export default {
             </div>
             <Button @clicked="hello"></Button>
         </div>
+        <!-- FORM SECTION -->
         <div class="form-section container-fluid">
             <div class="row g-3">
                 <div class="col-6">
@@ -344,10 +359,12 @@ main {
 
 }
 
+.active-slide {
+    background-image: linear-gradient(to left, #98E15F, #1BDA99);
+}
 
 
-
-
+// DIVISORE
 .line {
     height: 10px;
     width: 60px;
@@ -376,9 +393,7 @@ main {
     color: #1BDA99;
 }
 
-.active-slide {
-    background-image: linear-gradient(to left, #98E15F, #1BDA99);
-}
+
 
 // SECOND SECTION
 .second-section {
@@ -537,6 +552,25 @@ main {
 }
 
 // FOURTH SECTION
+.card-sec {
+    position: relative;
+
+    .hover {
+        display: none;
+        width: 100%;
+        height: 100%;
+        background-image: linear-gradient(to left, #98E15F, #1BDA99);
+        filter: opacity(0.9);
+        position: absolute;
+        z-index: 1;
+        flex-direction: column;
+        justify-content: flex-end;
+        border-radius: 12px;
+        color: white;
+        padding-bottom: 30px;
+    }
+}
+
 .fourth-section {
     padding: 150px 0;
     position: relative;
@@ -566,10 +600,19 @@ main {
         border-radius: 12px;
     }
 
-    img:hover {
-        // transform: scale(1.1);
-        background-color: linear-gradient(to left, #98E15F, #1BDA99);
-        transition: 0.5s;
+
+
+    .card-sec:hover {
+        transform: scale(1.1);
+        z-index: 1;
+        transition: 1s;
+
+
+        .hover {
+            display: flex;
+        }
+
+
     }
 
     button {
