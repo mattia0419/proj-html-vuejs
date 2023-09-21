@@ -4,7 +4,35 @@ export default {
         return {
             images: ['Group-36-2x.png', 'Group-35-2x.png', 'Group-40-2x.png'],
             activeSlide: 0,
-            gridImages: ['ina-soulis-227104-unsplash-1024x1024.jpg', 'sunisa-misa-531163-unsplash-1024x1024.jpg', '355H-1024x1024.jpg', 'photo-1448932252197-d19750584e56-1024x1024.jpg', 'business-competition-PB366D8-1024x1024.jpg', 'cozy-sofa-in-living-room-PQR5AB9-1024x1024.jpg', 'aa9a4539-PQGJ7HU-1024x1024.jpg', 'cody-davis-253928-unsplash-1024x1024.jpg']
+            gridImages: ['ina-soulis-227104-unsplash-1024x1024.jpg', 'sunisa-misa-531163-unsplash-1024x1024.jpg', '355H-1024x1024.jpg', 'photo-1448932252197-d19750584e56-1024x1024.jpg', 'business-competition-PB366D8-1024x1024.jpg', 'cozy-sofa-in-living-room-PQR5AB9-1024x1024.jpg', 'aa9a4539-PQGJ7HU-1024x1024.jpg', 'cody-davis-253928-unsplash-1024x1024.jpg'],
+            emailSearched: '',
+            imagesLogo: ['client-1-2x.png',
+                'client-3-2x.png',
+                'client-4-2x.png',
+                'client-5-2x.png',
+                'client-7-2x.png',
+                'client-9-2x.png'],
+            footerSec: [
+                {
+                    title: 'QUICK LINKS',
+                    links: ['Careers',
+                        'News',
+                        'Term of use',
+                        'Privacy Projects',
+                        'About',
+                        'Contact']
+                },
+                {
+                    title: 'CONTACT',
+                    address: 'Patricia C. Amedee 4401 Waldeck Street Grapevin Nashville, TX 76051',
+                    email: 'info@yourdomain.com',
+                    number: '+99 (0) 101 0000 888'
+                },
+                {
+                    title: 'LOCATION ON MAP',
+                    map: 'map.png'
+                }
+            ]
         }
     },
     methods: {
@@ -210,6 +238,34 @@ export default {
                 </div>
             </div>
             <button>READ MORE</button>
+        </div>
+        <div class="form-section container-fluid">
+            <div class="row g-3">
+                <div class="col-6">
+                    <div class="form d-flex justify-content-center align-items-center">
+                        <span>Are you ready?</span>
+                        <h2>Start a New Project</h2>
+                        <div class="email">
+                            <input type="email" placeholder="Enter Your Email Address" v-model="emailSearched">
+                            <button>SUBMIT</button>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="start d-flex justify-content-center align-items-center">
+                        <span>What Are You Waiting for?</span>
+                        <h2>Let's Talk About Work</h2>
+                        <button>START NOW</button>
+
+                    </div>
+                </div>
+            </div>
+            <div class="row row-cols-lg-6 g-3 p-5 mt-5">
+                <div class="col d-flex justify-content-center align-items-center" v-for="imageLogo in imagesLogo">
+                    <img :src="buildingImagePath(imageLogo)" alt="">
+                </div>
+            </div>
         </div>
 
 
@@ -585,6 +641,7 @@ main {
     display: flex;
     align-items: center;
     flex-direction: column;
+    background-color: #FAFAFA;
 
     h1 {
         font-size: 55px;
@@ -643,6 +700,76 @@ main {
         background-image: linear-gradient(to right, #454545, #0F0F0F);
         color: white;
         margin-top: 100px;
+    }
+}
+
+// FORM SECTION
+.form-section {
+    background-color: #FAFAFA;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 70px;
+
+
+    .form {
+        padding: 50px 35px;
+        background-image: linear-gradient(to right, #454545, #0F0F0F);
+        border-radius: 12px;
+        flex-direction: column;
+        color: white;
+
+        span {
+            padding-bottom: 20px;
+        }
+
+        h2 {
+            padding-bottom: 50px;
+        }
+
+        .email {
+            input {
+                padding: 12px 25px;
+                border: transparent;
+                border-top-left-radius: 20px;
+                border-bottom-left-radius: 20px;
+                background-color: #404040;
+            }
+
+            button {
+                padding: 12px 25px;
+                border: transparent;
+                border-top-right-radius: 20px;
+                border-bottom-right-radius: 20px;
+                background-color: #404040;
+                color: #A1A1A1;
+            }
+        }
+    }
+
+    .start {
+        padding: 50px 35px;
+        background-image: linear-gradient(to left, #98E15F, #1BDA99);
+        border-radius: 12px;
+        flex-direction: column;
+        color: white;
+
+        span {
+            padding-bottom: 20px;
+        }
+
+        h2 {
+            padding-bottom: 50px;
+        }
+
+        button {
+            padding: 12px 25px;
+            border-radius: 25px;
+            border: transparent;
+            margin-right: 30px;
+            background-image: linear-gradient(to right, #454545, #0F0F0F);
+            color: white;
+            box-shadow: 0 0 40px -10px;
+        }
     }
 }
 </style>
