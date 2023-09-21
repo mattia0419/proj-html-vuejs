@@ -180,6 +180,37 @@ export default {
             <span>Client</span>
 
         </div>
+        <div class="sixth-section container-fluid">
+            <h1>Latest News & Our <span class="other-green">Blog</span></h1>
+            <div class="line">
+                <span class="small-d"></span>
+                <span class="big-d"></span>
+            </div>
+            <div class="row row-cols-md-1 row-cols-lg-3 g-5">
+                <div class="card-sixth col">
+                    <img src="../assets/images/serious-businesswoman-with-documents-talking-on-P9Q6LX6-1024.jpg" alt="">
+                    <span class="p-3 label">
+                        <p>May 24, 2018 by Alex</p>
+                        <h6><span class="green-point"></span>Marketing Ideas</h6>
+                    </span>
+                </div>
+                <div class="card-sixth col">
+                    <img src="../assets/images/Businessman-at-the-desk-in-his-office-resting--1024x768.jpg" alt="">
+                    <span class="p-3 label">
+                        <p>May 24, 2018 by Alex</p>
+                        <h6><span class="green-point"></span>Rest During Working Hours</h6>
+                    </span>
+                </div>
+                <div class="card-sixth col">
+                    <img src="../assets/images/simple-home-office-with-tree-PBXRXYB-large-1024x768.jpg" alt="">
+                    <span class="p-3 label">
+                        <p>May 24, 2018 by Alex</p>
+                        <h6><span class="green-point"></span>Develop Your Startup Idea</h6>
+                    </span>
+                </div>
+            </div>
+            <button>READ MORE</button>
+        </div>
 
 
 
@@ -544,6 +575,74 @@ main {
 
     span {
         padding-bottom: 200px;
+    }
+}
+
+// SIXTH SECTION
+.sixth-section {
+    padding-top: 150px;
+    padding-bottom: 150px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    h1 {
+        font-size: 55px;
+    }
+
+    .card-sixth {
+        width: 400px;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+
+        img {
+            max-width: 100%;
+            border-radius: 12px;
+            box-shadow: 0px 0px 40px -10px;
+        }
+
+
+
+        .label {
+            width: 80%;
+            height: 80px;
+            margin-top: -40px;
+            background-color: white;
+            display: block;
+            position: relative;
+            z-index: 1;
+            border-radius: 8px;
+            box-shadow: 0px 0px 40px -10px;
+
+            p {
+                color: lightgray;
+                padding-left: 15px;
+                font-size: 12px;
+            }
+
+            .green-point {
+                display: inline-block;
+                width: 10px;
+                height: 10px;
+                border-radius: 50%;
+                background-color: #1BDA99;
+                margin-right: 5px;
+            }
+        }
+    }
+
+    button {
+        padding: 15px 30px;
+        border-radius: 25px;
+        border: transparent;
+        margin-right: 30px;
+        background-image: linear-gradient(to right, #454545, #0F0F0F);
+        color: white;
+        margin-top: 100px;
     }
 }
 </style>
